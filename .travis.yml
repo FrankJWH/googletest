@@ -10,6 +10,14 @@ language: cpp
 # It is more tedious, but grants us far more flexibility.
 matrix:
   include:
+    - env: CXX=g++-8 CC=gcc-8
+      addons:
+      apt:
+      sources:
+      - ubuntu-toolchain-r-test
+      packages:
+      - libc++-dev
+      - g++-8   
     - os: linux
       compiler: gcc
       sudo : true
